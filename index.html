@@ -173,7 +173,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-09-04 19:19:04 / 修改时间：19:19:51" itemprop="dateCreated datePublished" datetime="2020-09-04T19:19:04+08:00">2020-09-04</time>
+              <time title="创建时间：2020-09-04 19:19:04 / 修改时间：19:39:32" itemprop="dateCreated datePublished" datetime="2020-09-04T19:19:04+08:00">2020-09-04</time>
             </span>
 
           
@@ -198,82 +198,67 @@
             功能： 开店  上架 标价 处理订单 发货 ...
         买家    （货币 电话号码  姓名  付款账户  收货地址）
             功能： 浏览 加购物车  下单 支付  评价....
-    根据用户的需求来创建功能     
-注册-&gt; 注册信息表 —&gt; 账号-&gt; 使用功能
-        构造对象    -&gt;    对象名  -&gt; 对象调用方法
-
-类：    具有相同的、相似的属性、特征、行为方式、功能的一类事物的集合
-    程序中： 具有相同的、相似的属性、方法的一类对象的代码模板
-对象：具体的事物,一个对象就是一个具体的事物
-    程序中： 由类创建的，存在于内存中
-
-
-类的编写：
+      根据用户的需求来创建功能     
+  流程：注册-&gt; 注册信息表 —&gt; 账号-&gt; 使用功能
+        构造对象    -&gt;    对象名  -&gt; 对象调用方法</code></pre>
+<p>概念：<br>    类：    具有相同的、相似的属性、特征、行为方式、功能的一类事物的集合<br>        程序中： 具有相同的、相似的属性、方法的一类对象的代码模板<br>    对象：具体的事物,一个对象就是一个具体的事物<br>        程序中： 由类创建的，存在于内存中</p>
+<pre><code>类的编写：
     格式： public  class 类名&#123; &#125;
-代码命名规范:
-    类名：首字母大写，其后的每个单词首字母大写 -- 驼峰命名法
-    变量名：属性名   对象名  参数名  变量   
-            首字母小写，其后的单词首字母大写，如果缩写可以表达意思就可以缩写
-    常量名：全字段大写 EXTI_ON_CLOSE,尽可能的表达这个常量的作用
-    方法名：首字母小写，其后的单词首字母大写
-    包名： 全小写，每个段之间最好只有一个单词
+  代码命名规范:
+      类名：首字母大写，其后的每个单词首字母大写 -- 驼峰命名法
+      变量名：属性名   对象名  参数名  变量   
+              首字母小写，其后的单词首字母大写，如果缩写可以表达意思就可以缩写
+      常量名：全字段大写 EXTI_ON_CLOSE,尽可能的表达这个常量的作用
+      方法名：首字母小写，其后的单词首字母大写
+      包名： 全小写，每个段之间最好只有一个单词
 
-    类的编写：
+    一个类需要写什么：
 
         属性：可以由一个数据，变量表达的
-            属性类型  属性变量名；
-
-        类型：
-            基本数据类型 ：bit byte  short  int long double  char
-            类-数据类型 ： String  只要是一个类就可以作为一种类型
-
-
+            格式：属性类型  属性变量名；
+          类型：
+              基本数据类型 ：bit byte  short  int long double  char
+              类-数据类型  ： String  只要是一个类就可以作为一种类型
         方法：行为，功能的描述
             格式： 访问修饰符 返回值类型 方法名（参数类型）&#123; // 方法体&#125;</code></pre>
 <h2 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h2><pre><code>    关键字：extends
     格式：public class 子类名 extends 父类名&#123; &#125;
         父类： 超类 superClass
 
-Q:子类继承了父类的哪些东西？
-A:      全部             
+  Q:子类继承了父类的哪些东西？
+  A:      全部             
 
-Q：子类以及子类对象可以调用父类的哪些属性和方法？
-    A:    根据父类和子类的位置，父类属性和方法的访问修饰符
+  Q：子类以及子类对象可以调用父类的哪些属性和方法？
+  A:    根据父类和子类的位置，父类属性和方法的访问修饰符来决定子类以及子类对象有没有访问权限
         同包下：
             私有的属性和方法不能被调用
         不同包下：
             不同包的子类下:   私有的和默认的 属性在子类中不能被调用             
             不同包的非子类下:   私有的和默认的以及受保护的 属性不能被子类对象调用
 
-方法重写：
-    在子类中重写父类的方法：
-    格式：除方法体之外要写的一致
+  方法重写：
+      在子类中重写父类的方法：
+      格式：除方法体之外要写的一致
 
-    子类对象优先调用重写之后的
-    不改变父类的代码，的基础上再扩展代码
-        可以使用surper来指代父类先调用一次父类的代码
+      子类对象优先调用重写之后的
+      不改变父类的代码，的基础上再扩展代码
+          可以使用surper来指代父类先调用一次父类的代码
 
-    扩展父类的方法
+      作用：扩展 丰富
 
-自动转型：
-    类 实现 接口   类的对象可以自动转型为接口类型
+  自动转型：
+        类 实现 接口   类的对象可以自动转型为接口类型
 
-    强制转型：
-        int i=1.2;  int i=(int) 1.2;
-
-    类   对象 = new 类名（）；
-    父类 对象 = new 子类名（）；
-    子类对象可以自动转型为父类类型
-    子类对象转型后不能再调用自己独有的属性和方法了
+     强制转型：
+            int i=1.2;  int i=(int) 1.2;
+  自动转型：    
+        类   对象 = new 类名（）；
+        父类 对象 = new 子类名（）；
+        子类对象可以自动转型为父类类型
+        子类对象转型后不能再调用自己独有的属性和方法了
 
 
 Java的三大特性： 继承  封装  多态</code></pre>
-<p>// 练习：</p>
-<pre><code>自己实现 一个继承的结构类
-
-    自动转型  方法重写  
-
-继承的博客</code></pre>
 
       
     </div>
@@ -318,7 +303,7 @@ Java的三大特性： 继承  封装  多态</code></pre>
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-09-04 17:04:54 / 修改时间：17:06:09" itemprop="dateCreated datePublished" datetime="2020-09-04T17:04:54+08:00">2020-09-04</time>
+              <time title="创建时间：2020-09-04 17:04:54 / 修改时间：19:40:56" itemprop="dateCreated datePublished" datetime="2020-09-04T17:04:54+08:00">2020-09-04</time>
             </span>
 
           
@@ -332,77 +317,12 @@ Java的三大特性： 继承  封装  多态</code></pre>
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h2><pre><code>社会这么多年来对于大学生要求越来越苛刻，从包工作分配到需要迎合市场找工作，从就业基本无竞争压力到一岗位数百人与你争夺，从社会的香饽饽变成社会的大众。-</code></pre>
-<p>   在当年读着，“燕雀安知 鸿鹄之志，为中华崛起而读书”等志存高远的熏陶下长大，这难道就是教读者长大后学会着自己面对现实，学会着感受世界与童话的差别。</p>
-<p>  难得是大多数不是鸿鹄，却只想着鸿鹄，以至于连燕雀都做不了，无自知之力，无自治能力，没有一颗在平凡中发光发热的心。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/04/%E5%9C%A8%E8%BF%9B%E5%85%A5%E7%A4%BE%E4%BC%9A%E5%89%8D%E6%88%91%E4%BB%AC%E8%A6%81%E5%81%9A%E5%A5%BD%E5%87%86%E5%A4%87%E5%90%97%EF%BC%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zlylf">
-      <meta itemprop="description" content="乐于分享交流，崇尚 人做人做的事">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZLYLF">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/04/%E5%9C%A8%E8%BF%9B%E5%85%A5%E7%A4%BE%E4%BC%9A%E5%89%8D%E6%88%91%E4%BB%AC%E8%A6%81%E5%81%9A%E5%A5%BD%E5%87%86%E5%A4%87%E5%90%97%EF%BC%9F/" class="post-title-link" itemprop="url">在进入社会前我们要做好准备吗？</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-09-04 16:43:28 / 修改时间：17:03:33" itemprop="dateCreated datePublished" datetime="2020-09-04T16:43:28+08:00">2020-09-04</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>##</p>
-<ul>
-<li><p>社会这么多年来对于大学生要求越来越苛刻，从包工作分配到需要迎合市场找工作，从就业基本无竞争压力到一岗位数百人与你争夺，从社会的香饽饽变成社会的大众。-</p>
-</li>
-<li><p>在当年读着，“燕雀安知 鸿鹄之志，为中华崛起而读书”等志存高远的熏陶下长大，这难道就是教读者长大后学会着自己面对现实，学会着感受世界与童话的差别。</p>
-</li>
-<li><p>难得是大多数不是鸿鹄，却只想着鸿鹄，以至于连燕雀都做不了，无自知之力，无自治能力，没有一颗在平凡中发光发热的心</p>
-</li>
+          <h2 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h2><ul>
+<li>社会这么多年来对于大学生要求越来越苛刻，从包工作分配到需要迎合市场找工作，从就业基本无竞争压力到一岗位数百人与你争夺，从社会的香饽饽变成社会的大众。</li>
+<li>在当年在“燕雀安知 鸿鹄之志，为中华崛起而读书”等熏陶下长大，可惜的是大多数不是鸿鹄，却只想着鸿鹄，以至于连燕雀都做不了，无自知之力，无自治能力，却不知体系下各个位置上都需要 发热的人。</li>
+<li>我们时常觉得人无敌于天下才是不枉此生，我认为是敢于关键之时挺身而出，具有一定的奉献精神，平凡之时做好谋生的生活，星空草地，江河湖海山皆有人生来时的意义.</li>
 </ul>
-
+<h1 id="热爱生活的大多数"><a href="#热爱生活的大多数" class="headerlink" title="热爱生活的大多数"></a>热爱生活的大多数</h1>
       
     </div>
 
@@ -446,7 +366,7 @@ Java的三大特性： 继承  封装  多态</code></pre>
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-09-04 16:43:28 / 修改时间：16:49:11" itemprop="dateCreated datePublished" datetime="2020-09-04T16:43:28+08:00">2020-09-04</time>
+              <time title="创建时间：2020-09-04 16:43:28 / 修改时间：19:39:49" itemprop="dateCreated datePublished" datetime="2020-09-04T16:43:28+08:00">2020-09-04</time>
             </span>
 
           
@@ -460,10 +380,13 @@ Java的三大特性： 继承  封装  多态</code></pre>
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="空间"><a href="#空间" class="headerlink" title="空间"></a>空间</h2><p>  从前很想有一个自己的空间，现在每天都有自己的空间了却没有从前那么很想了</p>
+          <h2 id="空间"><a href="#空间" class="headerlink" title="空间"></a>空间</h2><p>  从前很想有一个自己的空间，现在的空间在维度上的意义太小</p>
 <h2 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h2><p>  从前总觉得时间又少又慢，现在发现只是自己看待时间的尺度不一样</p>
 <h2 id="物质"><a href="#物质" class="headerlink" title="物质"></a>物质</h2><p>  如果这个世界上的物质总量是固定的，那么我们从不曾得到什么，也不曾失去什么</p>
 <h2 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h2><p>  从前游戏都是有意思的，现在不过觉得游戏是程序，世界是程序，程序是不一定的，所以世界也是不一定的，这种变化只在某个刻度内变化。逃不脱</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>  代码是书写世界的语句  Hello World</p>
+<h2 id="日子"><a href="#日子" class="headerlink" title="日子"></a>日子</h2><p>  简单点，少点重复。这样才有意义</p>
+<h2 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h2><p>  意识的温存，所以经历是有温度的，记忆深刻的不是高温就是低温，太合适的温度最容易淡忘，形成的力量却也可以带来<br>习惯</p>
 
       
     </div>
@@ -545,7 +468,7 @@ Java的三大特性： 继承  封装  多态</code></pre>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
